@@ -1,0 +1,228 @@
+.header {
+  @extend %flex;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 50px;
+  }
+
+  .container {
+    padding: 18px 10px;
+
+    @media screen and (min-width: 768px) {
+      padding: 18px 34px;
+    }
+
+    span {
+      @include font-setting("Lato", normal, 400, 16px, 150%, 0.5em, $black);
+    }
+  }
+}
+
+.main {
+  @extend %flex;
+
+  h1 {
+    margin-bottom: 40px;
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 50px;
+    }
+  }
+
+  .container {
+    padding: 0 10px;
+
+    @media screen and (min-width: 768px) {
+      padding: 0 34px;
+    }
+
+    .hero-section {
+      width: 100%;
+    }
+
+    h2 {
+      margin-bottom: 40px;
+    }
+
+    .img-holder {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.footer {
+  @extend %flex;
+  background-color: #f4f4f4;
+
+  .container {
+    flex-direction: column;
+    padding: 50px 0;
+
+    @media screen and (min-width: 1440px) {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 70px 0;
+    }
+
+    .cta-holder {
+      @extend %flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @media screen and (min-width: 1440px) {
+        width: 50%;
+        padding: 0 34px;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+
+      .span-holder {
+        @include font-setting(
+          "Red Hat Display",
+          normal,
+          400,
+          32px,
+          42px,
+          0.05em,
+          $black
+        );
+        margin-bottom: 20px;
+        text-align: center;
+
+        @media screen and (min-width: 1440px) {
+          font-size: 48px;
+          line-height: 64px;
+        }
+      }
+      .contact-holder {
+        @extend %flex;
+        flex-direction: column;
+        //justify-content: center;
+        margin-bottom: 40px;
+
+        .info-holder {
+          text-align: center;
+          @include font-setting("Lato", normal, 400, 18px, 166%, 0.1em, $black);
+
+          &.tel {
+            margin-bottom: 15px;
+
+            @media screen and (min-width: 1440px) {
+              text-align: left;
+            }
+          }
+
+          a {
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+}
+
+.socials-holder {
+  @extend %flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 40px;
+  padding: 0 15px;
+
+  @media screen and (min-width: 1440px) {
+    width: 50%;
+    padding: 0 34px;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 0;
+  }
+
+  ul {
+    @extend %flex;
+    justify-content: space-between;
+    width: 269px;
+  }
+
+  .link {
+    @include size(50px, 50px);
+    border: 1px solid $dark;
+    position: relative;
+    display: inline-block;
+    background-color: $bg-social;
+
+    &:hover {
+      border: 1px solid $dark;
+      background-color: $dark;
+    }
+
+    i {
+      color: $dark;
+    }
+
+    &:hover i {
+      color: $white;
+    }
+  }
+
+  .icon-instagram:before {
+    content: "\ea92";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+  }
+
+  .icon-social-facebook:before {
+    content: "\e900";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 34px;
+  }
+
+  .icon-twitter:before {
+    content: "\ea96";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+  }
+
+  .icon-linkedin2:before {
+    content: "\eaca";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 26px;
+  }
+}
+
+.rights {
+  @include font-setting("Lato", normal, 400, 16px, 166%, 0.1em, $black);
+  @extend %flex;
+  text-align: center;
+  justify-content: center;
+  padding: 0 20px;
+
+  @media screen and (min-width: 1440px) {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
